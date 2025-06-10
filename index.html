@@ -1,46 +1,1157 @@
----
-layout: page
-description: "「离开世界之前 一切都是过程」"
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Plus 国内代充 | 安全快速订阅 - UIUIHAO 服务中心</title>
+    <meta name="description" content="我们提供安全、快速的 ChatGPT Plus 代充值服务，帮助国内用户解决无法订阅的问题。了解 ChatGPT Plus 价格、功能、次数限制以及如何充值。企业级保障，售后无忧。">
+    <meta name="keywords" content="ChatGPT Plus 代充, ChatGPT Plus 订阅, ChatGPT Plus 价格, ChatGPT Plus 国内, ChatGPT Plus 怎么充值, ChatGPT Plus 功能, ChatGPT Plus 次数限制, UIUIHAO">
+    <meta name="author" content="UIUIHAO">
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
-        <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
+    <link rel="canonical" href="https://uiuihao.com">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta property="og:title" content="ChatGPT Plus 专业代充服务 | UIUIHAO">
+    <meta property="og:description" content="无需国际信用卡，5分钟搞定 ChatGPT Plus 订阅。安全、可靠，即时开通。">
+    <meta property="og:image" content="https://uiuihao.com/images/og-image.jpg">
+    <meta property="og:url" content="https://uiuihao.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="UIUIHAO">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "ChatGPT Plus 代充服务",
+      "provider": {
+        "@type": "Organization",
+        "name": "UIUIHAO",
+        "url": "https://uiuihao.com"
+      },
+      "description": "为国内用户提供专业的ChatGPT Plus订阅代充服务，无需国际信用卡，支持支付宝和微信支付。",
+      "areaServed": {
+        "@type": "Country",
+        "name": "CN"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "ChatGPT Plus订阅方案",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ChatGPT Plus 月度订阅"
+            },
+            "price": "20",
+            "priceCurrency": "USD"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "1988"
+      }
+    }
+    </script>
+
+    <style>
+        /* --- CSS Variables and Reset --- */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --secondary-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --dark-gradient: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --text-light: #f9fafb;
+            --border-color: #e5e7eb;
+            --background-white: #ffffff;
+            
+            /* ✨ 微妙的背景渐变变量 */
+            --bg-gradient-soft: linear-gradient(180deg, #ffffff 0%, #f7f7fe 100%);
+            --bg-gradient-soft-reversed: linear-gradient(0deg, #ffffff 0%, #f7f7fe 100%);
+            --bg-gradient-angled: linear-gradient(150deg, #ffffff 0%, #f9f8ff 100%);
+
+            --success-color: #10b981;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            /* ✨ 应用基础背景色，渐变将在各个 section 中具体应用 */
+            background-color: #f7f7fe;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Reusable Components & Utilities --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: white;
+            box-shadow: var(--shadow-lg);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+        .btn-secondary {
+            color: var(--text-primary);
+            background: white;
+            border-color: var(--border-color);
+        }
+        .btn-secondary:hover {
+            border-color: #6366f1;
+            color: #6366f1;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: var(--dark-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* --- Header --- */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid var(--border-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        header.scrolled {
+            box-shadow: var(--shadow-md);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .nav-links a:hover { color: #6366f1; }
+        .nav-links a:not(.nav-cta)::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gradient);
+            transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--primary-gradient);
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: var(--shadow-md);
+        }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* --- Hero Section --- */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 120px;
+            /* ✨ 修改: 应用第一个渐变背景 */
+            background: var(--bg-gradient-soft);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            background: var(--dark-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-text .subtitle {
+            font-size: 22px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 400;
+            max-width: 500px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 48px;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 100px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        
+        /* --- Trust Section --- */
+        .trust-section {
+            padding: 80px 0;
+            /* ✨ 修改: 无缝衔接Hero的渐变 */
+            background: var(--bg-gradient-soft);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .trust-content { text-align: center; }
+        .trust-title {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .trust-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 60px;
+            align-items: center;
+            justify-items: center;
+        }
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        .trust-icon {
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--background-white);
+            border-radius: 16px;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+        }
+        .trust-text {
+            font-size: 16px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* --- Features Section --- */
+        .features {
+            padding: 120px 0;
+            /* ✨ 修改: 使用倾斜的渐变，创造变化 */
+            background: var(--bg-gradient-angled);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: #8b5cf6;
+        }
+        .feature-icon {
+            font-size: 32px;
+            width: 64px;
+            height: 64px;
+            background: var(--background-white);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: #6366f1;
+        }
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .feature-card p { color: var(--text-secondary); line-height: 1.8; }
+        
+        /* --- Pricing Section --- */
+        .pricing {
+            padding: 120px 0;
+            /* ✨ 修改: 使用反向的垂直渐变 */
+            background: var(--bg-gradient-soft-reversed);
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 860px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .pricing-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: var(--shadow-md);
+        }
+        .pricing-card.featured {
+            border-color: #6366f1;
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+        .pricing-card.featured::before {
+            content: '最受欢迎';
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gradient);
+            color: white;
+            padding: 6px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .pricing-card h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .pricing-desc { color: var(--text-secondary); margin-bottom: 32px; }
+        .price {
+            font-size: 56px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 8px;
+        }
+        .price-unit { font-size: 18px; color: var(--text-secondary); }
+        .pricing-features {
+            list-style: none;
+            margin: 40px 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .pricing-features .icon {
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+            background: var(--success-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .pricing-features .icon-disabled { background: #e5e7eb; }
+
+        /* --- Process Section --- */
+        .process {
+            padding: 120px 0;
+            background: var(--bg-gradient-angled);
+        }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, var(--border-color), var(--border-color) 10px, transparent 10px, transparent 20px);
+            z-index: 0;
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+            background: transparent; /* ✨ 让步骤块融入背景 */
+            z-index: 1;
+        }
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            box-shadow: var(--shadow-lg);
+            border: 4px solid var(--background-white);
+        }
+        .process-step h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .process-step p { color: var(--text-secondary); line-height: 1.8; }
+        
+        /* --- FAQ Section --- */
+        .faq {
+            padding: 120px 0;
+            background: var(--bg-gradient-soft);
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .faq-question:hover { color: #6366f1; }
+        .faq-toggle {
+            transition: transform 0.3s ease;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .faq-answer p {
+            padding: 0 24px 24px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .faq-item.active .faq-toggle { transform: rotate(45deg); }
+        .faq-item.active .faq-answer { max-height: 500px; }
+
+        /* --- CTA Section --- */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--dark-gradient);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .cta-content { position: relative; z-index: 1; }
+        .cta-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        .cta-button {
+            background: white;
+            color: #6366f1;
+            padding: 16px 40px;
+        }
+        .cta-button:hover {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.25);
+            transform: translateY(-4px);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--text-primary);
+            color: var(--text-light);
+            padding: 80px 0 40px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .footer-brand h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .footer-brand p {
+            color: #9ca3af;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            max-width: 320px;
+        }
+        .footer-social { display: flex; gap: 16px; }
+        .social-link {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: white;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            background: var(--primary-gradient);
+            transform: translateY(-2px);
+        }
+        .footer-column h4 {
+            font-size: 18px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            color: white;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 16px; }
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: white;
+            padding-left: 8px;
+        }
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-copyright, .footer-legal a {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+        .footer-legal { display: flex; gap: 24px; }
+        .footer-legal a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-legal a:hover { color: white; }
+
+        /* --- Mobile Menu & Responsive --- */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            justify-content: center;
+        }
+        .mobile-menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; gap: 60px; text-align: center; }
+            .hero-text h1 { font-size: 48px; }
+            .hero-text .subtitle { margin-left: auto; margin-right: auto;}
+            .hero-buttons { justify-content: center; }
+            .hero-image { order: -1; }
+            .features-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .section-title, .cta-title { font-size: 36px; }
+            .hero-text h1 { font-size: 40px; }
+            .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 48px auto 0; }
+            .hero-buttons .btn { width: 100%; }
+            .hero-stats { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: none; }
+            .pricing-cards { grid-template-columns: 1fr; }
+            .process-steps::before { display: none; }
+            .footer-content { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+
+            /* Mobile Navigation */
+            .mobile-menu-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                border-radius: 0 0 20px 20px;
+                z-index: 999;
+                gap: 20px;
+                animation: slideDown 0.3s ease-out;
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+            .mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        }
+
+        /* --- Animations --- */
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                    <rect width="40" height="40" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M20 10L26 16L20 22L14 16L20 10Z" fill="white"/>
+                    <path d="M20 18L26 24L20 30L14 24L20 18Z" fill="white" opacity="0.8"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40">
+                            <stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                UIUIHAO
+            </a>
+            <div class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">功能特性</a></li>
+                <li><a href="#pricing">价格方案</a></li>
+                <li><a href="#process">服务流程</a></li>
+                <li><a href="#faq">常见问题</a></li>
+                <li><a href="https://uiuihao.com/post/3.html" class="nav-cta">立即订阅</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>ChatGPT Plus<br>国内专业订阅服务</h1>
+                        <p class="subtitle">告别信用卡烦恼，我们为您提供安全、快速、可靠的 ChatGPT Plus 代充服务，助您轻松解锁 AI 的全部潜能。</p>
+                        <div class="hero-buttons">
+                            <a href="https://uiuihao.com/post/3.html" class="btn btn-primary">
+                                立即订阅
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+                            </a>
+                            <a href="#features" class="btn btn-secondary">了解功能</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://uiuihao.com/zb_users/upload/2025/06/202506041613589717485.png" alt="ChatGPT Plus 用户界面展示" loading="lazy">
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item fade-in-up">
+                        <div class="stat-number" data-target="2000">0+</div>
+                        <div class="stat-label">服务用户</div>
+                    </div>
+                    <div class="stat-item fade-in-up">
+                        <div class="stat-number" data-target="99.9">0%</div>
+                        <div class="stat-label">订阅成功率</div>
+                    </div>
+                    <div class="stat-item fade-in-up">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">分钟极速开通</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-section" id="trust">
+             <div class="container">
+                <div class="trust-content">
+                    <h2 class="trust-title">值得信赖的服务保障</h2>
+                    <div class="trust-logos">
+                        <div class="trust-item fade-in-up"><div class="trust-icon">🔒</div><div class="trust-text">企业级安全</div></div>
+                        <div class="trust-item fade-in-up"><div class="trust-icon">⚡</div><div class="trust-text">5分钟交付</div></div>
+                        <div class="trust-item fade-in-up"><div class="trust-icon">🛡️</div><div class="trust-text">售后有保障</div></div>
+                        <div class="trust-item fade-in-up"><div class="trust-icon">💳</div><div class="trust-text">支持微信/支付宝</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">解锁 ChatGPT Plus 的强大功能</h2>
+                    <p class="section-subtitle">从 GPT-4o 的卓越智能到 DALL-E 3 的无限创意，Plus 会员将彻底改变您的工作与学习方式。</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">🤖</div><h3>GPT-4o 完整访问权限</h3><p>享受 OpenAI 最新、最强模型的完整功能，消息限制是免费版的5倍，响应更快、更智能。</p>
+                    </div>
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">🎨</div><h3>DALL-E 3 图像生成</h3><p>将您的想法瞬间变为高质量图片。无论是设计稿、插画还是艺术创作，都信手拈来。</p>
+                    </div>
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">📊</div><h3>高级数据分析</h3><p>上传文件（如PDF, Excel），让 AI 帮您分析数据、制作图表、提炼洞察，轻松完成复杂报告。</p>
+                    </div>
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">🌐</div><h3>网页浏览与整合</h3><p>实时访问互联网信息，帮您总结新闻、研究报告、查找资料，信息永远快人一步。</p>
+                    </div>
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">🧩</div><h3>GPTs 个性化应用</h3><p>访问海量的 GPTs 应用商店，或创建专属的 AI 助手来处理特定任务，打造您的私人效率工具。</p>
+                    </div>
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">⚡</div><h3>高峰期优先访问</h3><p>在用户高峰时段免排队，享受稳定、流畅的服务，确保您的灵感和工作流程从不中断。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">选择适合您的方案</h2>
+                    <p class="section-subtitle">一个简单的选择，带来生产力的巨大飞跃。查看免费版与 Plus 版的核心区别。</p>
+                </div>
+                <div class="pricing-cards">
+                    <div class="pricing-card fade-in-up">
+                        <h3>免费版</h3><p class="pricing-desc">基础AI助手功能</p>
+                        <div class="price">¥0<span class="price-unit">/月</span></div>
+                        <ul class="pricing-features">
+                            <li><span class="icon">✓</span> GPT-3.5 基础模型</li>
+                            <li><span class="icon">✓</span> GPT-4o 限量体验</li>
+                            <li><span class="icon icon-disabled">×</span> 高级数据分析受限</li>
+                            <li><span class="icon icon-disabled">×</span> DALL-E 3 图像生成受限</li>
+                            <li><span class="icon icon-disabled">×</span> 无法使用 GPTs</li>
+                            <li><span class="icon icon-disabled">×</span> 高峰期需要排队</li>
+                        </ul>
+                        <a href="https://chatgpt.com" class="btn btn-secondary" style="width: 100%;" target="_blank" rel="noopener noreferrer">免费使用</a>
+                    </div>
+                    <div class="pricing-card featured fade-in-up">
+                        <h3>ChatGPT Plus</h3><p class="pricing-desc">专业级AI助手全功能</p>
+                        <div class="price">$20<span class="price-unit">/月</span></div>
+                        <ul class="pricing-features">
+                             <li><span class="icon">✓</span> <b>GPT-4o 完整访问权限</b></li>
+                             <li><span class="icon">✓</span> DALL-E 3, 网页浏览, 高级数据分析</li>
+                             <li><span class="icon">✓</span> 创建和使用 GPTs</li>
+                             <li><span class="icon">✓</span> 优先访问新功能</li>
+                             <li><span class="icon">✓</span> 更快的响应速度</li>
+                             <li><span class="icon">✓</span> <b>高峰期免排队</b></li>
+                        </ul>
+                        <a href="https://uiuihao.com/post/3.html" class="btn btn-primary" style="width: 100%;">立即代充订阅</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">如何充值 ChatGPT Plus？</h2>
+                    <p class="section-subtitle">三步搞定，我们的自动化系统将为您完成所有繁琐操作。</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step fade-in-up">
+                        <div class="step-number">1</div><h3>提交订单</h3><p>选择订阅方案，填写您的 ChatGPT 账号，通过支付宝或微信安全支付。</p>
+                    </div>
+                    <div class="process-step fade-in-up">
+                        <div class="step-number">2</div><h3>系统自动处理</h3><p>支付成功后，我们的系统将在5分钟内自动为您完成官方订阅流程。</p>
+                    </div>
+                    <div class="process-step fade-in-up">
+                        <div class="step-number">3</div><h3>开始使用</h3><p>您会收到成功邮件通知。立即登录，享受 ChatGPT Plus 的全部强大功能！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题解答</h2>
+                    <p class="section-subtitle">我们整理了关于 ChatGPT Plus 订阅、支付和使用的常见问题，希望能帮到您。</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question" role="button" aria-expanded="false">ChatGPT Plus 有必要买吗？<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer" role="region"><p>绝对有必要。如果您是学生、研究人员、开发者、内容创作者，或任何需要高效处理信息和激发创意的人，Plus 版的 GPT-4o、数据分析和 GPTs 功能将是您强大的生产力工具，为您节省大量时间。</p></div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question" role="button" aria-expanded="false">代充服务安全吗？我的账号信息会泄露吗？<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer" role="region"><p>非常安全。我们使用官方渠道进行支付，全程加密处理，绝不记录或泄露您的任何密码和个人信息。我们已为上千名用户提供服务，保持着零安全事故的记录，并提供售后保障。</p></div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question" role="button" aria-expanded="false">我自己无法订阅，是什么原因？<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer" role="region"><p>OpenAI 目前不支持中国大陆地区的信用卡支付，并且对IP地址、浏览器环境有严格的风控。我们的服务正是为了解决这一难题，让您能用本地支付方式轻松完成订阅。</p></div>
+                    </div>
+                    <div class="faq-item fade-in-up">
+                        <div class="faq-question" role="button" aria-expanded="false">ChatGPT Plus 的次数限制是多少？<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer" role="region"><p>目前，Plus 用户使用 GPT-4o 模型，每3小时有80条消息的限制。这个限制会根据实际使用情况动态调整，但远高于免费版，足以满足绝大多数高强度用户的需求。</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">准备好体验 AI 的惊人能力了吗？</h2>
+                    <p class="cta-subtitle">加入数千名满意用户的行列，让 AI 成为您的私人助理、创意伙伴和问题解决专家。</p>
+                    <a href="https://uiuihao.com/post/3.html" class="btn cta-button">
+                        5分钟，立即开启 Plus 之旅
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>UIUIHAO</h3>
+                    <p>您身边的 AI 工具订阅专家，致力于为国内用户提供便捷、安全的 ChatGPT Plus 及其他 AI 服务订阅解决方案。</p>
+                </div>
+                <div class="footer-column">
+                    <h4>产品服务</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pricing">价格方案</a></li>
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#process">服务流程</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>客户支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">帮助中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">服务状态</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">公司介绍</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 UIUIHAO. All Rights Reserved.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                </div>
+            </div>
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-</div>
-<hr>
-{% endfor %}
+    </footer>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Header Scroll Effect ---
+    const header = document.getElementById('header');
+    const scrollHandler = () => {
+        window.scrollY > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', scrollHandler, { passive: true });
+
+    // --- Mobile Menu Toggle ---
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    mobileMenuToggle.addEventListener('click', () => {
+        const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+        mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // --- Close mobile menu when a link is clicked ---
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+
+    // --- FAQ Accordion ---
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all items first for a cleaner accordion effect
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle the clicked item
+            faqItem.classList.toggle('active');
+            question.setAttribute('aria-expanded', !wasActive);
+        });
+    });
+
+    // --- Intersection Observer for Animations ---
+    const animatedElements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Animate numbers if the element is a stat counter
+                const numberElement = entry.target.querySelector('.stat-number');
+                if (numberElement && !numberElement.dataset.animated) {
+                    animateNumber(numberElement);
+                    numberElement.dataset.animated = 'true';
+                }
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    animatedElements.forEach(el => observer.observe(el));
+
+    // --- Number Counter Animation ---
+    function animateNumber(element) {
+        const target = parseFloat(element.dataset.target);
+        const suffix = element.innerText.replace(/[\d.,\s]/g, '');
+        const duration = 1500; // ms
+        let start = 0;
+        const stepTime = 20; // ms
+        const steps = duration / stepTime;
+        const increment = target / steps;
+
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                clearInterval(timer);
+                start = target;
+            }
+            // Format number with one decimal place if it's a float, otherwise as integer
+            const displayValue = Number.isInteger(target) ? Math.floor(start).toLocaleString() : start.toFixed(1);
+            element.textContent = displayValue + suffix;
+        }, stepTime);
+    }
+});
+</script>
+
+</body>
+</html>
